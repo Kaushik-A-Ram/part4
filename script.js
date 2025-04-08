@@ -1,0 +1,49 @@
+// define movie class
+const Movie = {
+  constructor(movieId, title, year, rating) {
+    this.movieId = movieId;
+    this.title = title;
+    this.year = year;
+    this.rating = rating;
+  },
+};
+
+// creating array of objects with mock data
+const movies = [
+  {
+    movieId: 2,
+    title: "Kikujiro (Kikujirô no natsu)",
+    year: 1999,
+    rating: 7.7,
+  },
+  { movieId: 6, title: "Dead End", year: 2003, rating: 6.5 },
+  { movieId: 3, title: "Men Don't Leave", year: 1990, rating: 6.6 },
+  {
+    movieId: 5,
+    title: "In the City of Sylvia (En la ciudad de Sylvia)",
+    year: 2007,
+    rating: 6.8,
+  },
+  { movieId: 8, title: "Surviving Desire", year: 1992, rating: 7.2 },
+  { movieId: 1, title: "Nightfall", year: 1957, rating: 7.1 },
+  { movieId: 7, title: "Fear Clinic", year: 2014, rating: 4.2 },
+  { movieId: 4, title: "Inception", year: 2010, rating: 8.8 },
+  { movieId: 10, title: "Frequencies", year: 2013, rating: 6.7 },
+  { movieId: 9, title: "My Brother the Devil", year: 2012, rating: 6.5 },
+];
+
+// sorting the array of objects using sort()
+console.log(movies.sort((a, b) => a.movieId - b.movieId));
+
+/* movie data
+(2, "Kikujiro (Kikujirô no natsu)", 1999, 7.7),
+  (6, "Dead End", 2003, 6.5),
+  (3, "Men Don't Leave", 1990, 6.6),
+  (5, "In the City of Sylvia (En la ciudad de Sylvia)", 2007, 6.8),
+  (8, "Surviving Desire", 1992, 7.2),
+  (1, "Nightfall", 1957, 7.1),
+  (7, "Fear Clinic", 2014, 4.2),
+  (4, "Inception", 2010, 8.8),
+  (10, "Frequencies", 2013, 6.7),
+  (9, "My Brother the Devil", 2012, 6.5),
+*/
