@@ -32,8 +32,28 @@ const movies = [
   { movieId: 9, title: "My Brother the Devil", year: 2012, rating: 6.5 },
 ];
 
-// sorting the array of objects using sort()
-console.log(movies.sort((a, b) => a.movieId - b.movieId));
+// sorting the array of objects using sort() and assign to variable
+const moviesSorted = movies.sort((a, b) => a.movieId - b.movieId);
+console.log(moviesSorted);
+
+// creating sequential search algorithm
+function seqSearch(movies, movieId) {
+    for (let i = 0; i < movies.length; i++) {
+        if (movies[i].movieId === movieId) {
+            return movies[i];
+        } 
+    }
+    return null;
+}
+
+// testing sequential search
+const search1 = seqSearch(movies, 8);
+if (search1) {
+    console.log("Movie Found:", search1);
+} else {
+    console.log("Movie not found");
+}
+
 
 /* movie data
 (2, "Kikujiro (Kikujirô no natsu)", 1999, 7.7),
