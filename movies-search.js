@@ -32,6 +32,9 @@ const movies = [
   { movieId: 9, title: "My Brother the Devil", year: 2012, rating: 6.5 },
 ];
 
+// printing unsorted array of objects
+console.log("Unsorted Movies:", movies);
+
 // sorting the array of objects using sort() and assign to variable
 const moviesSorted = movies.sort((a, b) => a.movieId - b.movieId);
 console.log(moviesSorted);
@@ -47,7 +50,7 @@ function seqSearch(movies, movieId) {
 }
 
 // testing sequential search
-const search1 = seqSearch(movies, 8);
+const search1 = seqSearch(movies, 99);
 if (search1) {
     console.log("Movie Found:", search1);
 } else {
